@@ -1,3 +1,4 @@
+#!/bin/bash
 OpenFOAM-2.4.x()
 {
    # Unset OpenFOAM environment variables.
