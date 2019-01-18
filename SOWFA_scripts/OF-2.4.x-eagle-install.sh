@@ -8,7 +8,7 @@ echo Cloning OpenFOAM-2.4.x
 git clone https://github.com/OpenFOAM/OpenFOAM-2.4.x.git
 
 # Patch to use flex >=2.6
-echo Patching to use flex version higher than 2.5
+echo Patching OpenFOAM to use a Flex version higher than 2.5
 cd OpenFOAM-2.4.x
 find src applications -name "*.L" -type f | xargs sed -i -e 's=\(YY\_FLEX\_SUBMINOR\_VERSION\)=YY_FLEX_MINOR_VERSION < 6 \&\& \1='
 cd ../
