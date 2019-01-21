@@ -12,7 +12,7 @@ OpenFOAM-2.4.x-spack()
    # Unload any compilers already loaded
    echo "Purging modules..."
    module purge
-   $PWD/spack/bin/spack load openmpi@1.7.3 cgal@4.12 boost@1.69 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex-2.6.3-gcc
+   $PWD/spack/bin/spack load openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex-2.6.3-gcc
    module list
 
    # Set the OpenFOAM version and installation directory
