@@ -1,4 +1,4 @@
-#!/bin/bashc
+#!/bin/bash
 
 # This script should be run in the your OpenFOAM base directory, e.g. ~/OpenFOAM/
 # You should not have downloaded anything yet, e.g. let this script download OF, SOWFA, spack, etc.
@@ -28,14 +28,13 @@ module purge
 spack install gcc@4.8.5
 spack load gcc
 g_fort=$(which gfortran)
-sed -i -e 's|null|'"$g_fort"'|g' ~/.spack/compilers.yaml.txt
+sed -i -e 's|null|'"$g_fort"'|g' ~/.spack/compilers.yaml
 spack install openmpi@1.7.3 cgal@4.12 boost@1.69 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
 spack load openmpi@1.7.3 cgal@4.12 boost@1.69 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
 
 # Compile OpenFOAM
-wget https://github.com/lawsonro3/shell_scripts/raw/master/SOWFA_scripts/OF-2.4.x-env
-source OF-2.4.x-env
-OpenFoam-2.4.x
+source OF-2.4.x-env-spack
+OpenFoam-2.4.x-spack
 cd OpenFOAM-2.4.x
 ./Allwmake
 cd ..
