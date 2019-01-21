@@ -30,7 +30,14 @@ spack load gcc
 g_fort=$(which gfortran)
 sed -i -e 's|null|'"$g_fort"'|g' ~/.spack/linux/compilers.yaml
 spack install openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
-spack load openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
+spack load
+spack load openmpi@1.7.3
+spack load cgal@4.12
+spack load boost@1.69.0
+spack load mpfr@3.1.6
+spack load readline@7.0
+spack load scotch@6.0.6
+spack load flex@2.6.3
 
 # Compile OpenFOAM
 source OF-2.4.x-env-spack
