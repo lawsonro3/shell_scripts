@@ -34,7 +34,7 @@ spack load openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6
 
 # Compile OpenFOAM
 source OF-2.4.x-env-spack
-OpenFoam-2.4.x-spack
+OpenFOAM-2.4.x-spack
 cd OpenFOAM-2.4.x
 ./Allwmake
 cd ..
