@@ -1,5 +1,5 @@
 #!/bin/bash
-OpenFOAM-2.4.x()
+OpenFOAM-2.4.x-spack()
 {
    # Unset OpenFOAM environment variables.
    if [ -z "$FOAM_INST_DIR" ]; then
