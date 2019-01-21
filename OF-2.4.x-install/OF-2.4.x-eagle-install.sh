@@ -28,7 +28,7 @@ module purge
 spack install gcc@4.8.5
 spack load gcc
 g_fort=$(which gfortran)
-sed -i -e 's|null|'"$g_fort"'|g' ~/.spack/compilers.yaml
+sed -i -e 's|null|'"$g_fort"'|g' ~/.spack/linux/compilers.yaml
 spack install openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
 spack load openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
 
