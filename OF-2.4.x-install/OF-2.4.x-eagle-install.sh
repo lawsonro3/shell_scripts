@@ -41,3 +41,6 @@ cd ..
 
 # Compile SOWFA
 cd SOWFA
+find applications -name "options" -type f | xargs sed -i -e 's=\FOAM_USER_APPBIN\SOWFA_DIR\g'
+./Allwmake
+cd ..
