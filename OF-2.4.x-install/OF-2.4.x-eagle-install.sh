@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Get Spack and add to front of path
 echo Cloning Spack
 git clone https://github.com/spack/spack.git
