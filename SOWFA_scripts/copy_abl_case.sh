@@ -1,9 +1,8 @@
 #! /bin/bash
 
-case_name=infPer_0.001m_5m
-base=/projects/windsim/mlawson/wake_steering/stableABLRuns/$case_name
-new=/projects/windsim/mlawson/wake_steering/stableABLRuns/infPer_0.15m_5m
-mesh=/projects/windsim/mlawson/wake_steering/stableABLRuns/mesh_3000x2000x750_5m_720c
+case_name=infPer_0.001m_5m_ADM
+base=/scratch/mlawson/stableABLRuns/$case_name
+new=/scratch/mlawson/stableABLRuns/${case_name}_20degYaw
 
 if [[ ! -e ${new} ]]; then
     echo 'Making directory:' ${new} '...'
@@ -15,7 +14,7 @@ fi
 
 start=0
 stop=719
-time=0
+time=30000
 
 cp $base/* $new/
 cp -r $base/constant $new/
@@ -28,6 +27,7 @@ do
 
    mkdir $new/processor$i
 
-   cp -rs $mesh/processor$i $new/
+   cp -rs $base/processor$i/constant $new/processor$i/
+   cp -rs $base/processor$i/$time $new/processor$i/
 
 done
