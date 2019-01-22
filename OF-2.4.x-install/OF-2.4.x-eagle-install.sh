@@ -32,6 +32,7 @@ cd ..
 
 
 # Compile OpenFOAM
+wget https://raw.githubusercontent.com/lawsonro3/shell_scripts/master/OF-2.4.x-install/OF-2.4.x-env-spack
 source OF-2.4.x-env-spack
 OpenFOAM-2.4.x-spack
 cd OpenFOAM-2.4.x
