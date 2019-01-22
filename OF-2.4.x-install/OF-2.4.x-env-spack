@@ -13,6 +13,7 @@ module load mpfr-3.1.6-gcc-4.8.5-kflyoj7
 module load readline-7.0-gcc-4.8.5-b4z2xcj
 module load scotch-6.0.6-gcc-4.8.5-7q5mr7x
 module load flex-2.6.3-gcc-4.8.5-fmg4vap
+module load gmp-6.1.2-gcc-4.8.5-6bsovvk
 module list
 
    # Unset OpenFOAM environment variables.
