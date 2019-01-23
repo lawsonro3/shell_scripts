@@ -34,11 +34,9 @@ cd ..
 
 # Patch bashrc to deal with problem purging up the bash env
 cd OpenFOAM-2.4.x
-cd etc
-mv bashrc bashrc-install-backup
-wget https://raw.githubusercontent.com/lawsonro3/shell_scripts/master/OF-2.4.x-install/OF-2.4.x-bashrc
-mv OF-2.4.x-bashrc bashrc
-cd ..
+rm etc/bashrc-install-backup
+mv etc/bashrc etc/bashrc-install-backup
+mv OF-2.4.x-bashrc-patch etc/bashrc
 cd ..
 
 # Compile OpenFOAM
