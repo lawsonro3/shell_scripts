@@ -1,8 +1,12 @@
-# How to use
-1. This script installs OF and SOWFA in your ~/OpenFOAM directory. This directory must exist.
-2. Run the install script `source OF-2.4.x-eagle-install.sh`
-3. Once the install is complete, run `foamInstallationTest` to make sure the instillation was successful 
-
 # Note
-* This script only works on linux systems
+1. This script installs OF and SOWFA in your `~/OpenFOAM` directory.
+1. This ~/OpenFOAM must exist.
+
+# Install
+1. Download the install script into `~/OpenFOAM`. 
+```cd ~/OpenFOAM; wget https://raw.githubusercontent.com/lawsonro3/shell_scripts/master/OF-2.4.x-install/OF-2.4.x-eagle-install.sh```
+1. Run the install script ```source OF-2.4.x-eagle-install.sh```
+
+# Other stuff
+* This script only works on linux systems 
 * If this does not work, PLEASE submit a bug report or email me!
