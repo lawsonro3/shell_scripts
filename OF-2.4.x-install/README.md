@@ -1,5 +1,5 @@
 # Note
-1. This script installs OF and SOWFA in your `~/OpenFOAM` directory.
+1. This script installs OpenFOAM-2.4.x and SOWFA in your `~/OpenFOAM` directory.
 1. The `~/OpenFOAM` directory must exist.
 
 # Install
