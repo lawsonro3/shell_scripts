@@ -1,6 +1,6 @@
 # Note
 1. This script installs OF and SOWFA in your `~/OpenFOAM` directory.
-1. This ~/OpenFOAM must exist.
+1. The `~/OpenFOAM` directory must exist.
 
 # Install
 1. Download the install script.
