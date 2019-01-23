@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script installs OpenFOAM 2.4.x on a linux system using spack to install all dependencies.
+# This script is somewhat of a hack, use as your own risk...
+
 # Set install location
 export inst_loc=/home/$USER/OpenFOAM
 
@@ -23,7 +26,7 @@ echo Cloning OpenFOAM-2.4.x
 mv OpenFOAM-2.4.x OpenFOAM-2.4.x-install-backup
 git clone https://github.com/OpenFOAM/OpenFOAM-2.4.x.git
 
-# Patch to use flex >=2.6
+# Patch OpenFOAM to use a version of flex higher than 2.5
 echo Patching OpenFOAM to use a Flex version higher than 2.5
 cd OpenFOAM-2.4.x
 find src applications -name "*.L" -type f | xargs sed -i -e 's=\(YY\_FLEX\_SUBMINOR\_VERSION\)=YY_FLEX_MINOR_VERSION < 6 \&\& \1='
