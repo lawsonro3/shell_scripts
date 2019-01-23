@@ -4,19 +4,19 @@ OpenFOAM-2.4.x-spack()
 
 export inst_loc=/home/$USER/OpenFOAM
 
-echo "Purging modules..."
-module purge
-module use $inst_loc/spack/share/spack/modules/linux-centos7-x86_64
-module load openmpi-1.7.3-gcc-4.8.5-p3zhhpm
-module load gcc-4.8.5-gcc-4.8.5-nkqvx2b
-module load cgal-4.12-gcc-4.8.5-3rapycz
-module load boost-1.69.0-gcc-4.8.5-52cfbc4
-module load mpfr-3.1.6-gcc-4.8.5-kflyoj7
-module load readline-7.0-gcc-4.8.5-b4z2xcj
-module load scotch-6.0.6-gcc-4.8.5-7q5mr7x
-module load flex-2.6.3-gcc-4.8.5-fmg4vap
-module load gmp-6.1.2-gcc-4.8.5-6bsovvk
-module list
+  echo "Purging modules..."
+  module purge
+  module use $inst_loc/spack/share/spack/modules/linux-centos7-x86_64
+  module load openmpi-1.7.3-gcc-4.8.5-p3zhhpm
+  module load gcc-4.8.5-gcc-4.8.5-nkqvx2b
+  module load cgal-4.12-gcc-4.8.5-3rapycz
+  module load boost-1.69.0-gcc-4.8.5-52cfbc4
+  module load mpfr-3.1.6-gcc-4.8.5-kflyoj7
+  module load readline-7.0-gcc-4.8.5-b4z2xcj
+  module load scotch-6.0.6-gcc-4.8.5-7q5mr7x
+  module load flex-2.6.3-gcc-4.8.5-fmg4vap
+  module load gmp-6.1.2-gcc-4.8.5-6bsovvk
+  module list
 
    # Unset OpenFOAM environment variables.
    if [ -z "$FOAM_INST_DIR" ]; then
@@ -25,6 +25,16 @@ module list
       echo "Unsetting OpenFOAM environment variables..."
       . $FOAM_INST_DIR/OpenFOAM-$OPENFOAM_VERSION/etc/config/unset.sh
    fi
+
+   module load openmpi-1.7.3-gcc-4.8.5-p3zhhpm
+   module load gcc-4.8.5-gcc-4.8.5-nkqvx2b
+   module load cgal-4.12-gcc-4.8.5-3rapycz
+   module load boost-1.69.0-gcc-4.8.5-52cfbc4
+   module load mpfr-3.1.6-gcc-4.8.5-kflyoj7
+   module load readline-7.0-gcc-4.8.5-b4z2xcj
+   module load scotch-6.0.6-gcc-4.8.5-7q5mr7x
+   module load flex-2.6.3-gcc-4.8.5-fmg4vap
+   module load gmp-6.1.2-gcc-4.8.5-6bsovvk
 
    # Set the OpenFOAM version and installation directory
    export OPENFOAM_VERSION=2.4.x
