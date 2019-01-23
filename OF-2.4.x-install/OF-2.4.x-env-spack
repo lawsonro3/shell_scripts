@@ -29,7 +29,7 @@ module list
    # Set the OpenFOAM version and installation directory
    export OPENFOAM_VERSION=2.4.x
    export OPENFOAM_NAME=OpenFOAM-$OPENFOAM_VERSION
-   export FOAM_INST_DIR=$PWD
+   export FOAM_INST_DIR=$inst_loc
    export WM_PROJECT_USER_DIR=/home/$USER/$USER-$OPENFOAM_VERSION
    export SOWFA_DIR=$FOAM_INST_DIR/SOWFA
 
