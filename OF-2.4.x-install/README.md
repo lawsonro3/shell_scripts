@@ -3,7 +3,7 @@
 1. This ~/OpenFOAM must exist.
 
 # Install
-1. Download the install script into `~/OpenFOAM`. 
+1. Download the install script.
 ```cd ~/OpenFOAM; wget https://raw.githubusercontent.com/lawsonro3/shell_scripts/master/OF-2.4.x-install/OF-2.4.x-eagle-install.sh```
 1. Run the install script ```source OF-2.4.x-eagle-install.sh```
 
