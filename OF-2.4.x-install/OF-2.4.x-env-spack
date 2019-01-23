@@ -2,9 +2,11 @@
 OpenFOAM-2.4.x-spack()
 {
 
+export inst_loc=/home/$USER/OpenFOAM
+
 echo "Purging modules..."
 module purge
-module use /home/$USER/OpenFOAM/spack/share/spack/modules/linux-centos7-x86_64
+module use $inst_loc/spack/share/spack/modules/linux-centos7-x86_64
 module load openmpi-1.7.3-gcc-4.8.5-p3zhhpm
 module load gcc-4.8.5-gcc-4.8.5-nkqvx2b
 module load cgal-4.12-gcc-4.8.5-3rapycz
