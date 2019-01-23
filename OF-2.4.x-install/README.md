@@ -1,6 +1,7 @@
 # Note
 1. This script installs OpenFOAM-2.4.x and SOWFA in your `~/OpenFOAM` directory.
 1. The `~/OpenFOAM` directory must exist.
+1. If something goes wrong, the first thing to look at is the `$inst_dir` variable in the install and env scripts.
 
 # Install
 1. Download the install script.
