@@ -23,7 +23,7 @@ spack install openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotc
 
 # Get OpenFOAM-2.4.x
 echo Cloning OpenFOAM-2.4.x
-mv OpenFOAM-2.4.x OpenFOAM-2.4.x-install-backup
+# mv OpenFOAM-2.4.x OpenFOAM-2.4.x-install-backup
 git clone https://github.com/OpenFOAM/OpenFOAM-2.4.x.git
 
 # Patch OpenFOAM to use a version of flex higher than 2.5
@@ -48,7 +48,7 @@ cd ..
 
 # Get SOWFA
 echo Cloning SOWF
-mv SOWFA SOWFA-install-backup
+# mv SOWFA SOWFA-install-backup
 git clone https://github.com/NREL/SOWFA.git
 
 # Patch SOWFA to use correct link directory for compilation
