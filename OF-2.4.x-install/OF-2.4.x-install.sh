@@ -36,7 +36,7 @@ cd ..
 cd OpenFOAM-2.4.x
 rm etc/bashrc-install-backup
 mv etc/bashrc etc/bashrc-install-backup
-mv OF-2.4.x-bashrc-patch etc/bashrc
+mv ../OF-2.4.x-bashrc-patch etc/bashrc
 cd ..
 
 # Compile OpenFOAM
