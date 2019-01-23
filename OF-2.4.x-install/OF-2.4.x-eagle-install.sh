@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script installs OpenFOAM 2.4.x on a linux system using spack to install all dependencies.
+# This script installs OpenFOAM 2.4.x and SOWFA on a linux system using spack to install all dependencies
 # This script is somewhat of a hack, use as your own risk...
 
 # Set install location
