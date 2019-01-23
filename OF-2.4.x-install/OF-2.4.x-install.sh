@@ -53,7 +53,7 @@ git clone https://github.com/NREL/SOWFA.git
 
 # Patch SOWFA to use correct link directory for compilation
 cd SOWFA
-find applications src -name "options" -type f | xargs sed -i -e 's=\WM_PROJECT_USER_DIR\SOWFA_DIR\g'
+find applications src -name "options" -type f | xargs sed -i -e 's\WM_PROJECT_USER_DIR\SOWFA_DIR\g'
 cd ..
 
 # Compile SOWFA
