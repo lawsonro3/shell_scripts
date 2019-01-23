@@ -1,10 +1,12 @@
 #!/bin/bash
 
+export inst_loc=/home/$USER/OpenFOAM
+
 # Get Spack and add to front of path
 cd /home/$USER/OpenFOAM
 echo Cloning Spack
 git clone https://github.com/spack/spack.git
-source /home/$USER/OpenFOAM/spack/share/spack/setup-env.sh
+source $inst_loc/spack/share/spack/setup-env.sh
 
 # Install stuff with Spack
 echo Installing stuff with Spack
