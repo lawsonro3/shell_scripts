@@ -7,7 +7,7 @@
 export inst_loc=/home/$USER/OpenFOAM
 
 # Get Spack and load spack
-cd /home/$USER/OpenFOAM
+cd $inst_loc
 echo Cloning Spack
 git clone https://github.com/spack/spack.git
 source $inst_loc/spack/share/spack/setup-env.sh
