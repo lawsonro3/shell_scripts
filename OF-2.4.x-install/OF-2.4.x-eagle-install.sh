@@ -27,7 +27,7 @@ echo Patching OpenFOAM to use a Flex version higher than 2.5
 cd OpenFOAM-2.4.x
 find src applications -name "*.L" -type f | xargs sed -i -e 's=\(YY\_FLEX\_SUBMINOR\_VERSION\)=YY_FLEX_MINOR_VERSION < 6 \&\& \1='
 cd etc
-mv bashrc bashrc.hold
+mv bashrc bashrc-install-backup
 wget https://raw.githubusercontent.com/lawsonro3/shell_scripts/master/OF-2.4.x-install/OF-2.4.x-bashrc
 mv OF-2.4.x-bashrc bashrc
 cd ..
