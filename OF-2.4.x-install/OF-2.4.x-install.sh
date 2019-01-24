@@ -11,15 +11,18 @@ cd $inst_loc
 echo Cloning Spack
 git clone https://github.com/spack/spack.git
 source $inst_loc/spack/share/spack/setup-env.sh
+mkdir ~/.spack
+cp ../packages.yaml ~/.spack
 
 # Install dependencies with Spack
 echo Installing dependencies with Spack
 module purge
+spack compiler find
 spack install gcc@4.8.5
 spack load gcc
-g_fort=$(which gfortran)
-sed -i -e 's|null|'"$g_fort"'|g' ~/.spack/linux/compilers.yaml
-spack install openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 readline@7.0 scotch@6.0.6 flex@2.6.3
+rm ~/.spack/linux/compilers.yaml
+spack compiler find
+spack install openmpi@1.7.3 cgal@4.12 boost@1.69.0 mpfr@3.1.6 scotch@6.0.6 flex@2.6.3
 
 # Get OpenFOAM-2.4.x
 echo Cloning OpenFOAM-2.4.x
