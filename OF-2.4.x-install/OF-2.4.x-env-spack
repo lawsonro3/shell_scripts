@@ -2,8 +2,8 @@
 OpenFOAM-2.4.x-central()
 {
 
-export inst_loc=/nopt/nrel/ecom/wind/OpenFOAM
-export spack_loc=/nopt/nrel/ecom/wind
+#export inst_loc=/nopt/nrel/ecom/wind/OpenFOAM
+#export spack_loc=/nopt/nrel/ecom/wind
 
   echo "Purging modules..."
   module purge
