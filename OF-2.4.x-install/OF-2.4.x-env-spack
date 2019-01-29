@@ -1,5 +1,5 @@
 #!/bin/bash
-OpenFOAM-2.4.x-central()
+OpenFOAM-2.4.x-spack()
 {
 
 #export inst_loc=/nopt/nrel/ecom/wind/OpenFOAM
