@@ -27,7 +27,7 @@ cd ..
 # Get SOWFA
 echo Cloning SOWF
 # mv SOWFA SOWFA-install-backup
-git clone https://github.com/NREL/SOWFA.git
+git clone https://github.com/NREL/SOWFA.git SOWFA-2.4.x
 
 # Patch SOWFA to use correct link directory for compilation
 cd SOWFA
