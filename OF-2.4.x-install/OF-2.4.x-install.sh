@@ -31,5 +31,6 @@ git clone https://github.com/NREL/SOWFA.git SOWFA-2.4.x
 
 # Compile SOWFA
 cd SOWFA-2.4.x
+echo Installing SOWFA-2.4.x with Allwmake
 ./Allwmake > log.Allwmake 2>&1
 cd ..
