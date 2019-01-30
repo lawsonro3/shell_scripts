@@ -21,7 +21,8 @@ cd ..
 source OF-2.4.x-env-spack # This script should have been downloaded and should be in the home directory
 OpenFOAM-2.4.x-spack
 cd OpenFOAM-2.4.x
-./Allwmake
+echo Installing OpenFOAM-2.4.x with Allwmake
+./Allwmake > log.Allwmake 2>&1
 cd ..
 
 # Get SOWFA
@@ -30,5 +31,5 @@ git clone https://github.com/NREL/SOWFA.git SOWFA-2.4.x
 
 # Compile SOWFA
 cd SOWFA-2.4.x
-./Allwmake
+./Allwmake > log.Allwmake 2>&1
 cd ..
