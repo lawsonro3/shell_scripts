@@ -29,6 +29,6 @@ echo Cloning SOWF
 git clone https://github.com/NREL/SOWFA.git SOWFA-2.4.x
 
 # Compile SOWFA
-cd SOWFA
+cd SOWFA-2.4.x
 ./Allwmake
 cd ..
