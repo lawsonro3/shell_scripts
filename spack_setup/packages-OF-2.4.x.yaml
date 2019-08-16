@@ -1,0 +1,15 @@
+packages:
+  mpfr:
+    version: [3.1.6]
+  slurm:
+    paths:
+      slurm@18-08-0-3: /nopt/slurm/current
+    buildable: False
+  openmpi:
+    version: [1.10.7]
+    variants: +pmi fabrics=verbs schedulers=slurm
+  all:
+    compiler: [gcc@4.8.5]
+    # Spack uses build_type=RelWithDebInfo by default for CMake packages
+    # and creates huge binaries unless you do this:
+    variants: build_type=Release
