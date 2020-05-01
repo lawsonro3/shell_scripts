@@ -1,0 +1,87 @@
+#export PATH=$PATH:/Users/mlawson/Library/Python/3.6/bin
+
+alias ebash='vi ~/.bashrc'
+alias sbash='. ~/.bashrc'
+alias c='clear'
+alias ll='ls -lt'
+alias lt='ls -lt | less'
+alias gh='cd /Users/mlawson/Documents/GitHub'
+alias proj='cd /Users/mlawson/GoogleDrive/Work/NREL/Projects/'
+alias baro='cd /Users/mlawson/GoogleDrive/Work/NREL/Projects/Barotrauma'
+alias sabl='cd /Users/mlawson/GoogleDrive/Work/NREL/Projects/Controls/stable_abl'
+alias ipy='ipython'
+
+# NREL HPC
+alias p1='ssh -Y peregrine-login1.nrel.gov'
+alias p2='ssh -Y peregrine-login2.nrel.gov'
+alias p3='ssh -Y peregrine-login3.nrel.gov'
+alias p4='ssh -Y peregrine-login4.nrel.gov'
+alias ed1='ssh ed1.hpc.nrel.gov'
+alias ed2='ssh ed2.hpc.nrel.gov'
+alias ed3='ssh ed3.hpc.nrel.gov'
+alias e1='ssh el1.hpc.nrel.gov'
+alias e2='ssh el2.hpc.nrel.gov'
+alias e3='ssh el3.hpc.nrel.gov'
+alias e4='ssh el4.hpc.nrel.gov'
+
+# NERSC
+alias cori='ssh -Y mlawson@cori.nersc.gov'
+
+# Argonne
+alias mira='ssh mira.alcf.anl.gov -l mlawson'
+alias cetus='ssh cetus.alcf.anl.gov -l mlawson'
+
+# Shell setup
+export PS1='\u@mb:\[\033[0;32m\]\W\[\033[0m\] $ '
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+set bell-style none
+
+# Nalu
+export SPACK_ROOT=~/Documents/GitHub/spack
+source ${SPACK_ROOT}/share/spack/setup-env.sh
+
+PeregrineMnt()
+{   
+    PeregrineUmnt
+    mnt_loc=$HOME/Peregrine
+    echo 'Mounting peregrine:/home/mlawson and peregrine:/scratch/mlawson to' $mnt_loc
+    cd $mnt_loc
+    sshfs mlawson@peregrine.hpc.nrel.gov:/home/mlawson home
+    sshfs mlawson@peregrine.hpc.nrel.gov:/scratch/mlawson scratch
+    sshfs mlawson@peregrine.hpc.nrel.gov:/projects/ssc/mlawson ssc
+    cd -
+}
+
+PeregrineUmnt()
+{
+mnt_loc=$HOME/Peregrine
+umount $mnt_loc/home
+umount $mnt_loc/scratch
+umount $mnt_loc/ssc
+}
+
+EagleMnt()
+{
+    PeregrineUmnt
+    mnt_loc=$HOME/eagle
+    echo 'Mounting eagle:/home/mlawson and eagle:/scratch/mlawson to' $mnt_loc
+    cd $mnt_loc
+    sshfs mlawson@eagle.hpc.nrel.gov:/home/mlawson home
+    sshfs mlawson@eagle.hpc.nrel.gov:/scratch/mlawson scratch
+    sshfs mlawson@eagle.hpc.nrel.gov:/projects/ssc/mlawson ssc
+    cd -
+}
+
+EagleUmnt()
+{
+mnt_loc=$HOME/eagle
+umount $mnt_loc/home
+umount $mnt_loc/scratch
+umount $mnt_loc/ssc
+}
+
+export PATH=~/bin:$PATH
+export PATH=/Users/mlawson/miniconda3/bin:$PATH
+
+export PYTHONPATH=/Users/mlawson/Documents/GitHub/wind_tools:/Users/mlawson/Documents/GitHub/wfc_tools:/Users/mlawson/Documents/GitHub/FLORIS:$PYTHONPATH
